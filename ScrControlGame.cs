@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ScrControlMenu : MonoBehaviour
+public class ScrControlGame : MonoBehaviour
 {
     public GameObject pausa;
     public GameObject opciones;
