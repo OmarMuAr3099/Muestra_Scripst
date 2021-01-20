@@ -169,7 +169,7 @@ public class ScrErin : MonoBehaviour
         if (canMove == true)
         {
             // Salto
-            //if ((enSuelo || !dobleSalto) && Input.GetKeyDown(KeyCode.Space))
+            
             if ((enSuelo || !dobleSalto) && Input.GetButtonDown("Jump"))
             {
                 rb.velocity = new Vector2(rb.velocity.x, JumpForce);
@@ -206,7 +206,7 @@ public class ScrErin : MonoBehaviour
 
 
             //Dash
-            //if (Input.GetKeyDown(KeyCode.RightArrow) && dashfreez == false)
+           
             if (Input.GetAxis("HorizontalDash") < 0 && dashfreez == false)
             {
                 dash = true;
@@ -214,7 +214,7 @@ public class ScrErin : MonoBehaviour
                 transform.localScale = new Vector3(0.3467676f, 0.3862883f, 0.3862883f);
             }
 
-            //if (Input.GetKeyDown(KeyCode.LeftArrow) && dashfreez == false)
+           
             if (Input.GetAxis("HorizontalDash") > 0 && dashfreez == false)
             {
                 transform.localScale = new Vector3(-0.3467676f, 0.3862883f, 0.3862883f);
@@ -255,17 +255,7 @@ public class ScrErin : MonoBehaviour
 
 
 
-            //Correr y animacion
-            /*if (Input.GetKey(KeyCode.D))
-            {
-
-                anim.SetBool("Run", true);
-            ataque.enabled = false;
-            attackSound.Stop();
-
-
-            }
-            else if (Input.GetKeyUp(KeyCode.D)) anim.SetBool("Run", false);*/
+           
 
             if (Input.GetAxis("HorizontalMove") > 0 || (Input.GetAxis("HorizontalMove") < 0))
             {
@@ -280,20 +270,6 @@ public class ScrErin : MonoBehaviour
             {
                 anim.SetBool("Run", false);
             }
-
-
-                /*if (Input.GetKey(KeyCode.A))
-                {
-                   
-                    anim.SetBool("Run", true);
-                ataque.enabled = false;
-                attackSound.Stop();
-
-                }
-                else if (Input.GetKeyUp(KeyCode.A)) anim.SetBool("Run", false);*/
-
-
-
 
 
 
@@ -361,12 +337,7 @@ public class ScrErin : MonoBehaviour
 
         if (canMove == true)
         {
-            //Correr y animacion
-            /*if (Input.GetKey(KeyCode.D))
-            {
-                transform.localScale = new Vector3(0.3467676f, 0.3862883f, 0.3862883f);
-                
-                transform.Translate(0.2f, 0, 0);
+            
 
             }*/
             if (Input.GetAxis("HorizontalMove") > 0)
@@ -377,13 +348,7 @@ public class ScrErin : MonoBehaviour
             }
 
 
-            /*if (Input.GetKey(KeyCode.A))
-            {
-                transform.localScale = new Vector3(-0.3467676f, 0.3862883f, 0.3862883f);
-                
-                transform.Translate(-0.2f, 0, 0);
-
-            }*/
+           
 
             if (Input.GetAxis("HorizontalMove") < 0)
             {
@@ -392,21 +357,7 @@ public class ScrErin : MonoBehaviour
                 transform.Translate(-0.2f, 0, 0);
             }
 
-            /*
-            float h = Input.GetAxis("Horizontal");
-            rb.AddForce(Vector2.right * speed * h);
-
-            float limitedSpeed = Mathf.Clamp(rb.velocity.x, -maxSpeed, maxSpeed);
-            rb.velocity = new Vector2(limitedSpeed, rb.velocity.y);
-
-            if (h < -0.01f)
-            {
-                transform.localScale = new Vector3(-0.3467676f, 0.3862883f, 0.3862883f);
-            }
-            if (h >0.01f)
-            {
-                transform.localScale = new Vector3(0.3467676f, 0.3862883f, 0.3862883f);
-            }*/
+            
         }
 
 
